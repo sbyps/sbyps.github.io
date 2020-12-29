@@ -45,12 +45,23 @@
       <audio class="exp" src="./m/exp8.mp3" controls></audio>
       <audio class="exp" src="./m/exp8.mp3" controls></audio>
       <audio class="exp" src="./m/exp8.mp3" controls></audio>
-      <audio style="display: none; height: 0" id="bg-music" preload="auto" src="./m/launch1.mp3"></audio>
+      <audio class="launch" src="./m/launch1.mp3" controls></audio>
+      <audio class="launch" src="./m/launch1.mp3" controls></audio>
+      <audio class="launch" src="./m/launch2.mp3" controls></audio>
+      <audio class="launch" src="./m/launch2.mp3" controls></audio>
+      <audio class="launch" src="./m/launch3.mp3" controls></audio>
+      <audio class="launch" src="./m/launch3.mp3" controls></audio>
+      <audio class="launch" src="./m/launch4.mp3" controls></audio>
+      <audio class="launch" src="./m/launch4.mp3" controls></audio>
+      <audio class="launch" src="./m/launch5.mp3" controls></audio>
+      <audio class="launch" src="./m/launch5.mp3" controls></audio>
+      <audio style="display:none; height: 0" id="bg-music" preload="auto" src="./m/DAOKO.mp3" loop="loop"></audio>
     </div>
 
     <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/index.js"></script>
     <script>
+      var canPlay = false;
       document.addEventListener("DOMContentLoaded", function () {
         function audioAutoPlay() {
           var audio = document.getElementById("bg-music");
@@ -58,6 +69,7 @@
           document.addEventListener(
             "WeixinJSBridgeReady",
             function () {
+              canPlay = true;
               audio.play();
             },
             false
