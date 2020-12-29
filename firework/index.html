@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>新年快乐</title>
+  </head>
+  <style>
+    canvas {
+      display: block;
+    }
+
+    .block-audio {
+      display: none;
+    }
+    body {
+      padding: 0px;
+      margin: 0px;
+    }
+  </style>
+  <body>
+    <canvas id="canvas"></canvas>
+
+    <div class="block-audio">
+      <audio class="exp" src="./m/exp1.mp3" controls></audio>
+      <audio class="exp" src="./m/exp1.mp3" controls></audio>
+      <audio class="exp" src="./m/exp1.mp3" controls></audio>
+      <audio class="exp" src="./m/exp2.mp3" controls></audio>
+      <audio class="exp" src="./m/exp2.mp3" controls></audio>
+      <audio class="exp" src="./m/exp2.mp3" controls></audio>
+      <audio class="exp" src="./m/exp3.mp3" controls></audio>
+      <audio class="exp" src="./m/exp3.mp3" controls></audio>
+      <audio class="exp" src="./m/exp3.mp3" controls></audio>
+      <audio class="exp" src="./m/exp4.mp3" controls></audio>
+      <audio class="exp" src="./m/exp4.mp3" controls></audio>
+      <audio class="exp" src="./m/exp4.mp3" controls></audio>
+      <audio class="exp" src="./m/exp5.mp3" controls></audio>
+      <audio class="exp" src="./m/exp5.mp3" controls></audio>
+      <audio class="exp" src="./m/exp5.mp3" controls></audio>
+      <audio class="exp" src="./m/exp6.mp3" controls></audio>
+      <audio class="exp" src="./m/exp6.mp3" controls></audio>
+      <audio class="exp" src="./m/exp6.mp3" controls></audio>
+      <audio class="exp" src="./m/exp7.mp3" controls></audio>
+      <audio class="exp" src="./m/exp7.mp3" controls></audio>
+      <audio class="exp" src="./m/exp7.mp3" controls></audio>
+      <audio class="exp" src="./m/exp8.mp3" controls></audio>
+      <audio class="exp" src="./m/exp8.mp3" controls></audio>
+      <audio class="exp" src="./m/exp8.mp3" controls></audio>
+      <audio style="display: none; height: 0" id="bg-music" preload="auto" src="./m/launch1.mp3"></audio>
+    </div>
+
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function audioAutoPlay() {
+          var audio = document.getElementById("bg-music");
+          audio.play();
+          document.addEventListener(
+            "WeixinJSBridgeReady",
+            function () {
+              audio.play();
+            },
+            false
+          );
+        }
+        audioAutoPlay();
+      });
+    </script>
+  </body>
+</html>
